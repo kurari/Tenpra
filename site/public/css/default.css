@@ -1,0 +1,20 @@
+body {
+	background:#F3FCC1;
+	color : #414333;
+	margin : 0px;
+}
+
+#header {
+	height : 117px;
+	background : url("../img/bg1.png");
+	position : relative;
+}
+
+#header h1{
+	color : #FFFFFF;
+	font-size : 26px;
+	position : absolute;
+	margin : 0px;
+	top : 30px;
+	left : 15px;
+}

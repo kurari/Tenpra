@@ -7,7 +7,7 @@ TUtil::appendIncludePath(
 );
 
 require_once "controller.class.php";
-$Ctrl = new TController('../root.ini');
+$Ctrl = new TFrameWorkController('../root.ini');
 
 // 画面の出力
 $Ctrl->show("system.default");
