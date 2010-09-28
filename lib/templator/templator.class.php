@@ -39,6 +39,7 @@ class TTemplator extends TStore
 		$this->registerResourceHandler('file', array($this,'resource_plugin_file_get'));
 		$this->registerResourceHandler('string', array($this,'resource_plugin_string_get'));
 		$this->registerCompiler('foreach', array($this,'compiler_plugin_foreach_compile'));
+		$this->registerCompiler('import', array($this,'compiler_plugin_import_compile'));
 	}
 
 	/**
@@ -221,6 +222,17 @@ class TTemplator extends TStore
 		$code .= $Templator->compile($data);
 		$code .= '<?php endforeach; unset($from, $k, $v); ?>';
 
+		return $code;
+	}
+
+	/**
+	 * Compiler Plugin Import
+	 */
+	function compiler_plugin_import_compile( $org, $inn, $data, $Templator  )
+	{
+		$opt = $this->getTagOption($inn);
+		$file = $opt['file'];
+		$code = $Templator->compile( $Templator->getTagOption($file)) ;
 		return $code;
 	}
 	
