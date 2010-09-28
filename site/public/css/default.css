@@ -5,16 +5,47 @@ body {
 }
 
 #header {
-	height : 117px;
-	background : url("../img/bg1.png");
+	height : 87px;
+	background : url("../img/bg1.png") 0px -30px;
 	position : relative;
 }
-
 #header h1{
 	color : #FFFFFF;
 	font-size : 26px;
 	position : absolute;
 	margin : 0px;
-	top : 30px;
+	top : 20px;
 	left : 15px;
+}
+
+#gm {
+	background : url("../img/bg_gm1.png");
+	height : 26px;
+}
+#gm a{
+	display : block;
+	padding-top : 6px;
+	height : 20px;
+	text-decoration : none;
+	float : left;
+	padding-left : 15px;
+	padding-right : 15px;
+	font-size : 12px;
+	color : white;
+}
+#gm a:hover {
+	background : url("../img/bg_gm1_over.png");
+}
+
+#footer {
+	border-top : double 3px #878780;
+	margin-top : 100px;
+	padding-top : 10px;
+	text-align : center;
+	font-size : 12px;
+	color : #424259;
+}
+
+#footer .menus {
+	margin-bottom : 10px;
 }
