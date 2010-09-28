@@ -4,94 +4,63 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>{{$site.title}}</title>
 		<link rel="stylesheet" type="text/css" href="{{$site.url}}/css/root.css" />
+		<style>
+			body {
+				text-align : center;
+			}
+			table {
+				margin : auto;
+			}
+			#hajime {
+			}
+			#yuma {
+				padding-left : 20px;
+			}
+			#ahi {
+				padding-left : 60px;
+			}
+			#pope {
+				padding-left : 30px;
+			}
+		</style>
 	</head>
 	<body>
+		{{import file="file://header.html"}}{{/import}}
+		{{import file="file://gm.html"}}{{/import}}
 
-		<div id="header">
-			<h1 id="logo"><img alt="KAMUNA" src="{{$site.url}}/img/logo_kamuna.png" /></h1>
-			<!--
-			<table cellspacing="0" cellpadding="0" width="100%">
+		<div id="root">
+
+			<h1>つくった人たち</h1>
+
+			<table id="hajime">
 				<tr>
-					<td width="200px">
-						<h1 id="logo"><img alt="KAMUNA" src="{{$site.url}}/img/logo_kamuna.png" /></h1>
-					</td>
-					<td>
-						<div id="global_menu">
-							<a href="#">TOP</a>
-							<a href="#">WIKI</a>
-							<a href="#">掲示板</a>
-							<a href="#">ショップ</a>
-							<a href="#">検索</a>
-							<a href="#">ヘルプ</a>
-							<a href="#">プライバシーポリシー</a>
-						</div>
-					</td>
+					<td><img src="{{$site.url}}/img/icon_hajime.png" /></td>
+					<td>プロデュース 松本創</td>
 				</tr>
 			</table>
-			//-->
+
+			<table id="yuma">
+				<tr>
+					<td>ディレクション 田原遊馬</td>
+					<td><img src="{{$site.url}}/img/icon_yuuma.png" /></td>
+				</tr>
+			</table>
+
+			<table id="ahi">
+				<tr>
+					<td><img src="{{$site.url}}/img/icon_ahi.png" /></td>
+					<td>デザイン 小松久美子</td>
+				</tr>
+			</table>
+
+			<table id="pope">
+				<tr>
+					<td>コーディング 森下智昭</td>
+					<td><img src="{{$site.url}}/img/icon_poppe.png" /></td>
+				</tr>
+			</table>
+
 		</div>
-
-		<div id="global_menu">
-			<a href="{{$site.url}}">TOP</a>
-			<a href="{{$site.url}}/index.php/view/credit">クレジット</a>
-			<a href="#">私たちについて</a>
-			<a href="#">代表挨拶</a>
-			<a href="#">掲示板</a>
-			<a href="#">チャット</a>
-			<a href="#">ブログ</a>
-			<a href="#">つぶやき</a>
-			<a href="#">コンタクト</a>
-			<a href="#">作成者達</a>
-			<a href="#">買い物</a>
-			<a href="#">仕事依頼</a>
-			<a href="#" id="login">ログイン/新規登録</a>
-		</div>
-
-		<div style="clear:both;text-align : center;" id="main_contents">
-			<h1>製作者</h1>
-
-
-				<table>
-					<tr>
-						<td>プロデュース</td>
-						<td>松本創</td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td>ディレクション</td>
-						<td>田原遊馬</td>
-					</tr>
-					<tr>
-						<td>デザイン</td>
-						<td>小松久美子</td>
-					</tr>
-					<tr>
-						<td>コーディング</td>
-						<td>森下智昭</td>
-					</tr>
-				</table>
-
-
-
-
-		<div id="footer">
-			<div id="footer_menus">
-				<a href="#">広告掲載</a>
-				<a href="#">広告掲載</a>
-				<a href="#">広告掲載</a>
-				<a href="#">広告掲載</a>
-				<a href="#">広告掲載</a>
-				<a href="#">広告掲載</a>
-				<a href="#">広告掲載</a>
-			</div>
-
-			<div style="clear:both">
-				&copy; since 2010 09 27, hajime.org 
-			</div>
-		</div>
-
-
+		{{import file="file://footer.html"}}{{/import}}
 	</body>
 </html>

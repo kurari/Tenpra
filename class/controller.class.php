@@ -27,8 +27,23 @@ class TFrameWorkController
 	}
 
 	function show( $path ){
-		$file = $this->Conf->format('${view.dir}/%s.html', $path);
+		$req = new TStore( );
 
+		if(isset($_SERVER['PATH_INFO'])){
+			$info = explode('/',$_SERVER['PATH_INFO']);
+			for($i=1;$i<count($info);$i+=2){
+				$k = $info[$i];
+				$v = $info[$i+1];
+				$req->set($k, $v);
+			}
+		}
+
+		$req->set($_POST);
+		$req->set($_GET);
+
+		if($req->has('view')) $path = $req->get('view');
+
+		$file = $this->Conf->format('${view.dir}/%s.html', $path);
 		$view = new TFrameWorkView( $this );
 		$view->set('site', $this->Conf->site);
 		$view->setTemplateDir( $this->Conf->viewDir );

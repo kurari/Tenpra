@@ -4,6 +4,11 @@ body {
 	margin : 0px;
 }
 
+h1 {
+	color : #795436;
+	font-size : 24px;
+}
+
 #header {
 	height : 87px;
 	background : url("../img/bg1.png") 0px -30px;
@@ -21,6 +26,7 @@ body {
 #gm {
 	background : url("../img/bg_gm1.png");
 	height : 26px;
+	padding-left : 10px;
 }
 #gm a{
 	display : block;
