@@ -7,29 +7,8 @@
 	</head>
 	<body>
 
-		<div id="header">
-			<h1 id="logo"><img alt="KAMUNA" src="{{$site.url}}/img/logo_kamuna.png" /></h1>
-			<!--
-			<table cellspacing="0" cellpadding="0" width="100%">
-				<tr>
-					<td width="200px">
-						<h1 id="logo"><img alt="KAMUNA" src="{{$site.url}}/img/logo_kamuna.png" /></h1>
-					</td>
-					<td>
-						<div id="global_menu">
-							<a href="#">TOP</a>
-							<a href="#">WIKI</a>
-							<a href="#">掲示板</a>
-							<a href="#">ショップ</a>
-							<a href="#">検索</a>
-							<a href="#">ヘルプ</a>
-							<a href="#">プライバシーポリシー</a>
-						</div>
-					</td>
-				</tr>
-			</table>
-			//-->
-		</div>
+		{{import file="file://header.html"}}{{/impot}}
+
 
 		<div id="global_menu">
 			<a href="{{$site.url}}">TOP</a>
