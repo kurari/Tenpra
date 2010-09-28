@@ -135,7 +135,8 @@ class TTemplator extends TStore
 
 	function getTagOption( $inn ){
 		$text = $this->compileVar( $inn );
-		if( preg_match_all('/\s*([^\s=]+)\s*=\s*( (?:[^"\'(\s]|  "[^"]+" | \([^)]*\) |  \'[^\']+\')+ )\s*/xms',$text,$m) ){
+		if( preg_match_all('/\s*([^\s=]+)\s*=\s*( (?:[^"\'(\s]|  "([^"]+)" | \([^)]*\) |  \'([^\']+)\')+ )\s*/xms',$text,$m) ){
+			$m[2] = empty($m[3]) ? $m[2]: $m[3];
 			$opt = array_combine( $m[1], $m[2] );
 		}
 		return $opt;
@@ -232,7 +233,7 @@ class TTemplator extends TStore
 	{
 		$opt = $this->getTagOption($inn);
 		$file = $opt['file'];
-		$code = $Templator->compile( $Templator->getTagOption($file)) ;
+		$code = $Templator->compile( $Templator->getTemplate($file)) ;
 		return $code;
 	}
 	
