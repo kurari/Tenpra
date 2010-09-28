@@ -19,6 +19,8 @@ class TTemplator extends TStore
 	 */
 	public $rightDelimiter = '}}';
 
+	public $templateDir = '.';
+
 	/**
 	 * plugins
 	 */
@@ -26,6 +28,11 @@ class TTemplator extends TStore
 		'resource'=>array( ),
 		'compiler'=>array( )
 	);
+
+	public function setTemplateDir($dir)
+	{
+		$this->templateDir = $dir;
+	}
 
 	public function __construct( )
 	{
@@ -178,6 +185,7 @@ class TTemplator extends TStore
 	function resource_plugin_file_get( $path, $Templator )
 	{
 		$file = $path;
+		if($file[0] !== '/') $file = $this->templateDir.'/'.$file;
 		return file_get_contents($file);
 	}
 
